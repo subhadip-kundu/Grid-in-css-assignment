@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(6, 200px);
+    grid-template-areas:
+        "a b c d e f"
+        "g h . . . ."; /* Added two empty areas to match the 6 columns */
+    grid-gap: 10px;
+}
+.box{
+    height: 70px;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.container div:nth-child(odd) {
+    background-color: #3b3b3b;
+}
+
+.container div:nth-child(even) {
+    background-color: #8b8b8b;
+}
+
+.box1 {
+    grid-area: a;
+}
+
+box2 {
+    grid-area: b;
+}
+
+box3 {
+    grid-area: c;
+}
+
+box4 {
+    grid-area: d;
+}
+
+box5 {
+    grid-area: e;
+}
+
+box6 {
+    grid-area: f;
+}
+
+box7 {
+    grid-area: g;
+}
+
+box8 {
+    grid-area: h;
+}

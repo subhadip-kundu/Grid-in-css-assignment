@@ -1,0 +1,43 @@
+Title: Understanding grid-auto-row and grid-auto-column
+
+grid-auto-row and grid-auto-column are CSS Grid Layout properties used to define the size and behavior of implicitly created rows and columns in a grid when there are more grid items than the explicitly defined rows and columns.
+
+1. Using grid-auto-row:
+
+   - grid-auto-row is used to specify the size and behavior of automatically generated rows in the grid.
+
+   Example:
+
+   .grid-container {
+     display: grid;
+     grid-template-rows: 50px 100px;
+     grid-auto-rows: 150px; /* Define the size of auto-generated rows */
+   }
+
+   In this example, if you place more grid items in the grid than the two explicitly defined rows can accommodate, additional rows will be created automatically, each with a height of 150px.
+
+2. Using grid-auto-column:
+
+   - grid-auto-column is used to specify the size and behavior of automatically generated columns in the grid.
+
+   Example:
+
+   .grid-container {
+     display: grid;
+     grid-template-columns: 1fr 2fr;
+     grid-auto-columns: 100px; /* Define the size of auto-generated columns */
+   }
+
+   In this example, if you place more grid items in the grid than the two explicitly defined columns can accommodate, additional columns will be created automatically, each with a width of 100px.
+
+Combining grid-auto-row and grid-auto-column:
+
+You can combine both grid-auto-row and grid-auto-column to create flexible grid layouts. For instance:
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 50px 100px;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: 150px;
+  grid-auto-columns: 100px;
+}
